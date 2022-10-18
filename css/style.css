@@ -25,12 +25,43 @@ nav ul {
 nav ul li {
     display: inline-block;
     padding: 20px;
-    
+    position: relative;
+}
+nav ul li ul{
+    position: absolute;
+    left: 0%;
+    top: 50px;
+    /* background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10%; */
+    width: 100%;
+    transform: scale(0);
+    transition: 0.5s;
+}
+nav ul li:hover > ul{ 
+    transform: scale(1);
 }
 nav ul li a{
     text-decoration: none;
     color: white;
+    padding: 10px 30px;
+    border: 2px solid transparent;
+    border-radius: 25px;
 }
+nav ul li a:hover{
+    background-color: white;
+    color: black;
+    width: 0;
+    transition: 0.5s;
+}
+nav ul li ul li{
+    position: relative
+}
+nav ul li ul li ul{
+    position: absolute;
+    left: 90%;
+    top: 0%;
+}
+
 nav h1 a{
     text-decoration: none;
     color: white;
@@ -43,16 +74,20 @@ nav h1 a{
     background-color: transparent;
     padding: 8px 30px;
     border-radius: 10px ;
+    transition: 0.5s;
+}
+.contact-us:hover{
+    background-color: white;
+    color: black;
 }
 nav h1{
-    font-weight: 900;
     font-size: 2.5em;
 }
 .heading{
     color: white;
     text-align: right;
     font-size: 3em;
-    margin: 30px;
+    margin: 50px 30px;
 }
 header P{
         text-align: right;
@@ -67,5 +102,5 @@ header div{
 .btn{
     position: absolute;
     right: 30px;
-    top: 282px;
+    top: 350px;
 }
